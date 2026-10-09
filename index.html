@@ -7,9 +7,9 @@
   <link rel="icon" type="image/png" href="assets/logo.png">
   <meta name="description" content="Taste of Eden – visueller Website-Entwurf für Pierogi, Burger und Foodtruck & Events in St. Gallen.">
   <title>Taste of Eden – Startseite · Vorschau</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="extras.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261009b">
+  <link rel="stylesheet" href="extras.css?v=20261009b">
+  <script src="script.js?v=20261009b" defer></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -34,6 +34,7 @@
   <aside class="side-nav" aria-label="Schnellzugriff">
     <a href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span><span>Hier<br>bestellen</span></a>
     <a href="speisekarte.html"><span aria-hidden="true">♧</span><span>Speisekarte</span></a>
+    <a href="#galerie"><span aria-hidden="true">▧</span><span>Galerie</span></a>
     <a href="foodtruck-events.html#catering-anfrage"><span aria-hidden="true">✦</span><span>Catering<br>anfragen</span></a>
     <a href="foodtruck-events.html#foodtruck-anfrage"><span aria-hidden="true">▱</span><span>Foodtruck<br>anfragen</span></a>
     <a href="impressum.html"><span aria-hidden="true">§</span><span>Impressum</span></a>
@@ -74,13 +75,16 @@
 
     <section id="galerie" class="section gallery-section" aria-labelledby="gallery-title">
       <div class="gallery-heading"><div><p class="eyebrow">EINBLICKE</p><h2 id="gallery-title">Taste of Eden in Bildern.</h2></div><p>Aufnahmen aus dem für dieses Projekt bereitgestellten Bildmaterial: Speisen, Getränke und der Restauranteingang.</p></div>
-      <div class="gallery-grid">
-        <figure class="gallery-item gallery-item-wide"><img src="assets/restaurant_aussen.webp" alt="Eingang von Taste of Eden in St. Gallen"><figcaption>Vor Ort</figcaption></figure>
-        <figure class="gallery-item"><img src="assets/pierogi_takeaway_web.webp" alt="Pierogi in einer Take-away-Schachtel"><figcaption>Pierogi zum Mitnehmen</figcaption></figure>
-        <figure class="gallery-item"><img src="assets/haus_eistee.webp" alt="Haus-Eistee im Glas auf dem Gartentisch"><figcaption>Haus-Eistee</figcaption></figure>
-        <figure class="gallery-item"><img src="assets/burger_pommes.webp" alt="Burger mit Pommes auf dem Teller"><figcaption>Burger & Pommes</figcaption></figure>
-        <figure class="gallery-item"><img src="assets/briochemuffin.webp" alt="Briochemuffin mit Blaubeeren"><figcaption>Hausgemachtes Dessert</figcaption></figure>
-        <figure class="gallery-item gallery-item-wide"><img src="assets/saucen.webp" alt="Verschiedene Saucen auf einem Holztisch"><figcaption>Zum Teilen und Probieren</figcaption></figure>
+      <div class="gallery-viewer">
+        <figure class="gallery-feature"><img id="gallery-feature-image" src="assets/restaurant_aussen.webp" alt="Eingang von Taste of Eden in St. Gallen"><figcaption id="gallery-feature-caption">Vor Ort</figcaption></figure>
+        <div class="gallery-thumbs" role="group" aria-label="Galeriebilder auswählen">
+          <button class="gallery-thumb" type="button" aria-pressed="true" aria-label="Vor Ort anzeigen" data-gallery-src="assets/restaurant_aussen.webp" data-gallery-alt="Eingang von Taste of Eden in St. Gallen" data-gallery-caption="Vor Ort"><img src="assets/restaurant_aussen.webp" alt="" loading="lazy"><span>Vor Ort</span></button>
+          <button class="gallery-thumb" type="button" aria-pressed="false" aria-label="Pierogi zum Mitnehmen anzeigen" data-gallery-src="assets/pierogi_takeaway_web.webp" data-gallery-alt="Pierogi in einer Take-away-Schachtel" data-gallery-caption="Pierogi zum Mitnehmen"><img src="assets/pierogi_takeaway_web.webp" alt="" loading="lazy"><span>Pierogi</span></button>
+          <button class="gallery-thumb" type="button" aria-pressed="false" aria-label="Haus-Eistee anzeigen" data-gallery-src="assets/haus_eistee.webp" data-gallery-alt="Haus-Eistee im Glas auf dem Gartentisch" data-gallery-caption="Haus-Eistee"><img src="assets/haus_eistee.webp" alt="" loading="lazy"><span>Eistee</span></button>
+          <button class="gallery-thumb" type="button" aria-pressed="false" aria-label="Burger und Pommes anzeigen" data-gallery-src="assets/burger_pommes.webp" data-gallery-alt="Burger mit Pommes auf dem Teller" data-gallery-caption="Burger & Pommes"><img src="assets/burger_pommes.webp" alt="" loading="lazy"><span>Burger</span></button>
+          <button class="gallery-thumb" type="button" aria-pressed="false" aria-label="Hausgemachtes Dessert anzeigen" data-gallery-src="assets/briochemuffin.webp" data-gallery-alt="Briochemuffin mit Blaubeeren" data-gallery-caption="Hausgemachtes Dessert"><img src="assets/briochemuffin.webp" alt="" loading="lazy"><span>Dessert</span></button>
+          <button class="gallery-thumb" type="button" aria-pressed="false" aria-label="Saucen anzeigen" data-gallery-src="assets/saucen.webp" data-gallery-alt="Verschiedene Saucen auf einem Holztisch" data-gallery-caption="Zum Teilen und Probieren"><img src="assets/saucen.webp" alt="" loading="lazy"><span>Saucen</span></button>
+        </div>
       </div>
       <a class="text-link section-link" href="https://www.instagram.com/tasteofedenklg/" target="_blank" rel="noopener noreferrer">Taste of Eden auf Instagram <span aria-hidden="true">↗</span></a>
     </section>

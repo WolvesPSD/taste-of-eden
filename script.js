@@ -41,6 +41,17 @@ document.querySelectorAll('[data-carousel]').forEach(button => button.addEventLi
   showSlide(slideIndex + (button.dataset.carousel === 'next' ? 1 : -1));
 }));
 
+const galleryImage = document.querySelector('#gallery-feature-image');
+const galleryCaption = document.querySelector('#gallery-feature-caption');
+const galleryThumbs = [...document.querySelectorAll('.gallery-thumb')];
+galleryThumbs.forEach(button => button.addEventListener('click', () => {
+  if (!galleryImage || !galleryCaption) return;
+  galleryImage.src = button.dataset.gallerySrc;
+  galleryImage.alt = button.dataset.galleryAlt;
+  galleryCaption.textContent = button.dataset.galleryCaption;
+  galleryThumbs.forEach(thumb => thumb.setAttribute('aria-pressed', String(thumb === button)));
+}));
+
 const dialog = document.querySelector('.inquiry-dialog');
 const inquiryTitle = document.querySelector('#inquiry-title');
 const inquiryForm = document.querySelector('#inquiry-form');
