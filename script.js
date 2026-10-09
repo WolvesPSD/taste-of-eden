@@ -44,12 +44,48 @@ document.querySelectorAll('[data-carousel]').forEach(button => button.addEventLi
 const galleryImage = document.querySelector('#gallery-feature-image');
 const galleryCaption = document.querySelector('#gallery-feature-caption');
 const galleryThumbs = [...document.querySelectorAll('.gallery-thumb')];
-galleryThumbs.forEach(button => button.addEventListener('click', () => {
+let galleryIndex = 0;
+function showGallery(index) {
   if (!galleryImage || !galleryCaption) return;
+  galleryIndex = (index + galleryThumbs.length) % galleryThumbs.length;
+  const button = galleryThumbs[galleryIndex];
   galleryImage.src = button.dataset.gallerySrc;
   galleryImage.alt = button.dataset.galleryAlt;
   galleryCaption.textContent = button.dataset.galleryCaption;
   galleryThumbs.forEach(thumb => thumb.setAttribute('aria-pressed', String(thumb === button)));
+  button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+}
+galleryThumbs.forEach((button, index) => button.addEventListener('click', () => showGallery(index)));
+document.querySelectorAll('[data-gallery-step]').forEach(button => button.addEventListener('click', () => {
+  showGallery(galleryIndex + Number(button.dataset.galleryStep));
+}));
+
+const mascotDialog = document.querySelector('.mascot-dialog');
+document.querySelector('.gallery-secret')?.addEventListener('click', () => mascotDialog?.showModal());
+mascotDialog?.querySelectorAll('.mascot-close, .mascot-done').forEach(button => {
+  button.addEventListener('click', () => mascotDialog.close());
+});
+mascotDialog?.addEventListener('click', event => {
+  if (event.target === mascotDialog) mascotDialog.close();
+});
+
+const truckTimers = new WeakMap();
+document.querySelectorAll('.truck-secret').forEach(button => button.addEventListener('click', () => {
+  const scene = button.closest('.event-photo, .events-truck');
+  const surprise = scene?.querySelector('.truck-surprise');
+  const live = scene?.querySelector('.truck-live');
+  if (!surprise) return;
+  clearTimeout(truckTimers.get(surprise));
+  surprise.classList.remove('is-playing');
+  void surprise.offsetWidth;
+  scene.classList.add('is-surprising');
+  surprise.classList.add('is-playing');
+  if (live) live.textContent = 'Bis bald!';
+  truckTimers.set(surprise, setTimeout(() => {
+    surprise.classList.remove('is-playing');
+    scene.classList.remove('is-surprising');
+    if (live) live.textContent = '';
+  }, 4300));
 }));
 
 const dialog = document.querySelector('.inquiry-dialog');

@@ -8,8 +8,8 @@
   <meta name="description" content="Taste of Eden – visueller Website-Entwurf für Pierogi, Burger und Foodtruck & Events in St. Gallen.">
   <title>Taste of Eden – Startseite · Vorschau</title>
   <link rel="stylesheet" href="styles.css?v=20261009b">
-  <link rel="stylesheet" href="extras.css?v=20261009c">
-  <script src="script.js?v=20261009b" defer></script>
+  <link rel="stylesheet" href="extras.css?v=20261009d">
+  <script src="script.js?v=20261009d" defer></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -75,9 +75,9 @@
     </section>
 
     <section id="galerie" class="section gallery-section" aria-labelledby="gallery-title">
-      <div class="gallery-heading"><div><p class="eyebrow">EINBLICKE</p><h2 id="gallery-title">Taste of Eden in Bildern.</h2></div><p>Aufnahmen aus dem für dieses Projekt bereitgestellten Bildmaterial: Speisen, Getränke und der Restauranteingang.</p></div>
+      <div class="gallery-heading"><div><p class="eyebrow">EINBLICKE</p><h2 id="gallery-title">Taste of Eden in Bildern.</h2></div><p>Aufnahmen aus dem für dieses Projekt bereitgestellten Bildmaterial: Speisen, Getränke und der Restauranteingang.</p><button class="gallery-secret" type="button" aria-label="Kleines Pierogi entdecken" title="Ein kleines Pierogi">🥟</button></div>
       <div class="gallery-viewer">
-        <figure class="gallery-feature"><img id="gallery-feature-image" src="assets/restaurant_aussen.webp" alt="Eingang von Taste of Eden in St. Gallen"><figcaption id="gallery-feature-caption">Vor Ort</figcaption></figure>
+        <figure class="gallery-feature"><img id="gallery-feature-image" src="assets/restaurant_aussen.webp" alt="Eingang von Taste of Eden in St. Gallen"><figcaption id="gallery-feature-caption">Vor Ort</figcaption><button class="gallery-tap gallery-tap-prev" type="button" aria-label="Vorheriges Galeriebild" data-gallery-step="-1"><span aria-hidden="true">‹</span></button><button class="gallery-tap gallery-tap-next" type="button" aria-label="Nächstes Galeriebild" data-gallery-step="1"><span aria-hidden="true">›</span></button></figure>
         <div class="gallery-thumbs" role="group" aria-label="Galeriebilder auswählen">
           <button class="gallery-thumb" type="button" aria-pressed="true" aria-label="Vor Ort anzeigen" data-gallery-src="assets/restaurant_aussen.webp" data-gallery-alt="Eingang von Taste of Eden in St. Gallen" data-gallery-caption="Vor Ort"><img src="assets/restaurant_aussen.webp" alt="" loading="lazy"><span>Vor Ort</span></button>
           <button class="gallery-thumb" type="button" aria-pressed="false" aria-label="Pierogi zum Mitnehmen anzeigen" data-gallery-src="assets/pierogi_takeaway_web.webp" data-gallery-alt="Pierogi in einer Take-away-Schachtel" data-gallery-caption="Pierogi zum Mitnehmen"><img src="assets/pierogi_takeaway_web.webp" alt="" loading="lazy"><span>Pierogi</span></button>
@@ -97,7 +97,7 @@
     </section>
 
     <section class="section event-teaser">
-      <div class="event-visual"><div class="event-photo" role="img" aria-label="Taste-of-Eden-Foodtruck dezent hinter dem Schriftzug Foodtruck und Events"><span class="event-photo-kicker">UNSER FOODTRUCK</span><strong>Foodtruck & Events</strong></div></div>
+      <div class="event-visual"><div class="event-photo" role="group" aria-label="Taste-of-Eden-Foodtruck"><span class="event-photo-kicker">UNSER FOODTRUCK</span><strong>Foodtruck & Events</strong><button class="truck-secret" type="button" aria-label="Foodtruck-Überraschung starten" title="Ein kleiner Stern">✦</button><div class="truck-surprise" aria-hidden="true"><span class="truck-mini"><span class="truck-mini-box">TASTE<br>OF EDEN</span><span class="truck-mini-cab"></span><i></i><i></i></span><span class="truck-message">Bis bald!</span></div><span class="truck-live visually-hidden" role="status" aria-live="polite"></span></div></div>
       <div class="event-copy"><p class="eyebrow">AUCH FÜR IHREN ANLASS</p><h2>Foodtruck<br>& Events</h2><p>Eine eigene Seite zeigt später Möglichkeiten, Bilder und zwei getrennte Anfragewege. In dieser Vorschau können Sie den Aufbau bereits ansehen.</p><a class="text-link" href="foodtruck-events.html">Bereich ansehen <span aria-hidden="true">→</span></a></div>
     </section>
 
@@ -106,6 +106,7 @@
   </main>
 
   <footer id="kontakt" class="site-footer"><div><strong>TASTE OF EDEN</strong><p>Lindenstrasse 21 · 9000 St. Gallen</p><p><a href="tel:+41768411993">+41 76 841 1993</a> · <a href="mailto:tasteofedenklg@gmail.com">tasteofedenklg@gmail.com</a></p></div><p>Website-Entwurf zur Abstimmung · noch nicht die offizielle Restaurantseite</p><div class="footer-links"><a href="https://www.instagram.com/tasteofedenklg/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="impressum.html">Impressum</a></div></footer>
+  <dialog class="mascot-dialog" aria-labelledby="mascot-title"><button class="mascot-close" type="button" aria-label="Überraschung schliessen">×</button><p class="eyebrow">KLEINE ÜBERRASCHUNG</p><img src="assets/mascot-easteregg.png" alt="Das Pierogi-Maskottchen mit Kochmütze und Sonnenbrille" width="260" height="217"><h2 id="mascot-title">Du hast mich gefunden!</h2><p>Ein Gruss aus der Küche von Taste of Eden.</p><button class="button button-gold mascot-done" type="button">Weiterstöbern</button></dialog>
   <div class="demo-toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>
