@@ -69,6 +69,30 @@ mascotDialog?.addEventListener('click', event => {
   if (event.target === mascotDialog) mascotDialog.close();
 });
 
+const edenDialog = document.querySelector('.eden-dialog');
+const homeBrand = document.querySelector('[data-logo-secret]');
+let logoTapCount = 0;
+let lastLogoTap = 0;
+homeBrand?.addEventListener('click', event => {
+  event.preventDefault();
+  const now = Date.now();
+  logoTapCount = now - lastLogoTap < 1800 ? logoTapCount + 1 : 1;
+  lastLogoTap = now;
+  if (logoTapCount >= 3) {
+    logoTapCount = 0;
+    edenDialog?.showModal();
+    return;
+  }
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+});
+edenDialog?.querySelectorAll('.eden-close, .eden-done').forEach(button => {
+  button.addEventListener('click', () => edenDialog.close());
+});
+edenDialog?.addEventListener('click', event => {
+  if (event.target === edenDialog) edenDialog.close();
+});
+
 const truckTimers = new WeakMap();
 document.querySelectorAll('.truck-secret').forEach(button => button.addEventListener('click', () => {
   const scene = button.closest('.event-photo, .events-truck');
