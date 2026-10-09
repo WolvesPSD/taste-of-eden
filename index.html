@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173127">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta name="description" content="Taste of Eden – visueller Website-Entwurf für Pierogi, Burger und Foodtruck & Events in St. Gallen.">
+  <title>Taste of Eden – Startseite · Vorschau</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="extras.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <div class="preview-ribbon">WEBSITE-VORSCHAU · NOCH NICHT DIE OFFIZIELLE RESTAURANTSEITE</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Taste of Eden – Startseite">
+      <img src="assets/logo.png" alt="Taste of Eden Logo" width="68" height="68">
+      <span class="brand-wordmark"><strong>TASTE OF EDEN</strong><small>ST. GALLEN</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">☰</button>
+    <nav id="main-nav" class="top-nav" aria-label="Hauptnavigation">
+      <a href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer">Lieferservice & Take-away</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="foodtruck-events.html">Foodtruck & Events</a>
+      <a href="#impressum">Impressum</a>
+    </nav>
+    <a class="header-cta" href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer">Jetzt bestellen <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <aside class="side-nav" aria-label="Schnellzugriff">
+    <a href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span><span>Hier<br>bestellen</span></a>
+    <a href="#speisekarte"><span aria-hidden="true">♧</span><span>Speisekarte</span></a>
+    <a href="foodtruck-events.html#catering-anfrage"><span aria-hidden="true">✦</span><span>Catering<br>anfragen</span></a>
+    <a href="foodtruck-events.html#foodtruck-anfrage"><span aria-hidden="true">▱</span><span>Foodtruck<br>anfragen</span></a>
+  </aside>
+
+  <main id="main" class="page-content">
+    <section class="hero" aria-label="Willkommen bei Taste of Eden">
+      <div class="hero-images is-active" data-slide aria-hidden="false"><div class="hero-image hero-image-main"><img src="assets/pierogi.jpg" alt="Pierogi von Taste of Eden auf einem Teller"></div><div class="hero-image hero-image-secondary"><img src="assets/burger.jpg" alt="Burger mit Pommes von Taste of Eden"></div></div>
+      <div class="hero-images" data-slide aria-hidden="true"><div class="hero-image hero-image-main"><img src="assets/burger.jpg" alt="Burger mit Pommes von Taste of Eden"></div><div class="hero-image hero-image-secondary"><img src="assets/pierogi.jpg" alt="Pierogi von Taste of Eden"></div></div>
+      <div class="hero-images" data-slide aria-hidden="true"><div class="hero-image hero-image-main"><img src="assets/dessert.jpg" alt="Dessert von Taste of Eden"></div><div class="hero-image hero-image-secondary"><img src="assets/pierogi.jpg" alt="Pierogi von Taste of Eden"></div></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow eyebrow-light">TASTE OF EDEN · ST. GALLEN</p>
+        <h1>Essen, das in<br>Erinnerung bleibt.</h1>
+        <p class="hero-subtitle">Pierogi · Burger · Desserts</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#speisekarte">Speisekarte ansehen <span aria-hidden="true">→</span></a>
+          <a class="button button-outline-light" href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer">Jetzt bestellen</a>
+        </div>
+      </div>
+      <div class="hero-scroll">ENTDECKEN <span aria-hidden="true">↓</span></div>
+      <div class="hero-controls" aria-label="Bilder wechseln"><button class="hero-arrow" type="button" data-carousel="prev" aria-label="Vorheriges Bild">←</button><span class="hero-count" aria-live="polite">01 / 03</span><button class="hero-arrow" type="button" data-carousel="next" aria-label="Nächstes Bild">→</button></div>
+    </section>
+
+    <section id="speisekarte" class="section section-intro">
+      <div class="section-heading">
+        <p class="eyebrow">UNSERE AUSWAHL</p>
+        <h2>Für jeden Moment<br>etwas Gutes.</h2>
+        <p>Ein erster Einblick in die Speisen von Taste of Eden. Die vollständige Karte und aktuellen Preise werden vor Veröffentlichung ergänzt.</p>
+      </div>
+      <div class="dish-grid" id="galerie">
+        <article class="dish-card"><img src="assets/pierogi.jpg" alt="Pierogi" loading="lazy"><div><span>01</span><h3>Pierogi</h3><p>Aus dem Restaurant, im Originalfoto.</p></div></article>
+        <article class="dish-card"><img src="assets/burger.jpg" alt="Burger und Pommes" loading="lazy"><div><span>02</span><h3>Burger & Pommes</h3><p>Ein Blick auf den Burger mit Beilage.</p></div></article>
+        <article class="dish-card"><img src="assets/dessert.jpg" alt="Dessert von Taste of Eden" loading="lazy"><div><span>03</span><h3>Desserts</h3><p>Für den süssen Abschluss.</p></div></article>
+      </div>
+    </section>
+
+    <section id="ueber-uns" class="section feature-section">
+      <div class="feature-mark">TASTE<br>OF<br>EDEN</div>
+      <div><p class="eyebrow">ÜBER UNS</p><h2>Gutes Essen.<br>Ein guter Moment.</h2></div>
+      <p>Hier kann der Betrieb später seine eigene Geschichte erzählen. Für diese Vorschau bleibt der Text bewusst kurz und ohne ungeprüfte Aussagen über Herkunft, Herstellung oder Auszeichnungen.</p>
+    </section>
+
+    <section class="section event-teaser">
+      <div class="event-visual"><div class="photo-placeholder"><span>ORIGINALFOTO FOLGT</span><strong>Foodtruck & Events</strong></div></div>
+      <div class="event-copy"><p class="eyebrow">AUCH FÜR IHREN ANLASS</p><h2>Foodtruck<br>& Events</h2><p>Eine eigene Seite zeigt später Möglichkeiten, Bilder und zwei getrennte Anfragewege. In dieser Vorschau können Sie den Aufbau bereits ansehen.</p><a class="text-link" href="foodtruck-events.html">Bereich ansehen <span aria-hidden="true">→</span></a></div>
+    </section>
+
+    <section id="bestellen" class="section order-section"><p class="eyebrow">LIEFERSERVICE & TAKE-AWAY</p><h2>Lieber gleich bestellen?</h2><p>Die Bestellung öffnet die Taste-of-Eden-Seite bei Just Eat in einem neuen Tab.</p><a class="button button-gold" href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer">Bei Just Eat bestellen <span aria-hidden="true">↗</span></a></section>
+    <section id="impressum" class="section legal-section"><p class="eyebrow">RECHTLICHE ANGABEN</p><h2>Impressum</h2><p>Die vollständigen Betreiber-, Kontakt- und Datenschutzangaben werden vor einer Veröffentlichung geprüft und ergänzt. Diese Vorschau ist keine rechtsverbindliche Restaurantseite.</p></section>
+  </main>
+
+  <footer id="kontakt" class="site-footer"><div><strong>TASTE OF EDEN</strong><p>Lindenstrasse 21 · 9000 St. Gallen</p><p><a href="tel:+41768411993">+41 76 841 1993</a> · <a href="mailto:tasteofedenklg@gmail.com">tasteofedenklg@gmail.com</a></p></div><p>Website-Entwurf zur Abstimmung · noch nicht die offizielle Restaurantseite</p><a href="foodtruck-events.html#catering-anfrage">Anfragen</a></footer>
+  <div class="demo-toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
+
