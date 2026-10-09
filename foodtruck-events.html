@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173127">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta name="description" content="Visueller Website-Entwurf: Foodtruck & Events von Taste of Eden.">
+  <title>Taste of Eden – Foodtruck & Events · Vorschau</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="extras.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="events">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <div class="preview-ribbon">WEBSITE-VORSCHAU · NOCH NICHT DIE OFFIZIELLE RESTAURANTSEITE</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Taste of Eden – Startseite"><img src="assets/logo.png" alt="Taste of Eden Logo" width="68" height="68"><span class="brand-wordmark"><strong>TASTE OF EDEN</strong><small>ST. GALLEN</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">☰</button>
+    <nav id="main-nav" class="top-nav" aria-label="Hauptnavigation"><a href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer">Lieferservice & Take-away</a><a href="index.html#galerie">Galerie</a><a href="index.html#ueber-uns">Über uns</a><a class="active" href="foodtruck-events.html" aria-current="page">Foodtruck & Events</a><a href="index.html#impressum">Impressum</a></nav>
+    <a class="header-cta" href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer">Jetzt bestellen <span aria-hidden="true">↗</span></a>
+  </header>
+  <aside class="side-nav" aria-label="Schnellzugriff"><a href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span><span>Hier<br>bestellen</span></a><a href="index.html#speisekarte"><span aria-hidden="true">♧</span><span>Speisekarte</span></a><a href="#catering-anfrage" data-inquiry="Catering"><span aria-hidden="true">✦</span><span>Catering<br>anfragen</span></a><a href="#foodtruck-anfrage" data-inquiry="Foodtruck"><span aria-hidden="true">▱</span><span>Foodtruck<br>anfragen</span></a></aside>
+
+  <main id="main" class="page-content events-main">
+    <section class="events-layout">
+      <div class="events-images" aria-label="Geplante Bildfolge">
+        <div class="photo-placeholder placeholder-truck"><span>ORIGINALFOTO FOLGT</span><strong>Foodtruck</strong></div>
+        <div class="photo-placeholder placeholder-table"><span>ORIGINALFOTO FOLGT</span><strong>Gedeckter Tisch</strong></div>
+        <figure class="events-dish"><img src="assets/pierogi.jpg" alt="Pierogi von Taste of Eden"><figcaption>Speise aus dem Restaurant</figcaption></figure>
+      </div>
+      <div class="events-panel">
+        <p class="eyebrow">UNTERWEGS FÜR GUTEN GESCHMACK</p>
+        <h1>Foodtruck<br>& Events</h1>
+        <p class="events-lead">Guter Geschmack kommt zu Ihnen.</p>
+        <div class="divider"></div>
+        <p>Ob bei Ihnen zu Hause, am Wunschort oder direkt vor Ort: Wir gestalten Essen für Ihren Anlass. Erzählen Sie uns, was Sie planen – wir melden uns mit einer passenden Idee.</p>
+        <p class="draft-note">Textentwurf zur Abstimmung. Umfang, Einsatzgebiet und Leistungen müssen vom Betreiber bestätigt werden.</p>
+        <div class="events-actions" id="anfragen"><button class="button button-gold" type="button" data-inquiry="Foodtruck">Foodtruck anfragen <span aria-hidden="true">→</span></button><button class="button button-outline-dark" type="button" data-inquiry="Catering">Catering anfragen <span aria-hidden="true">→</span></button></div>
+        <p class="form-notice">Demo: Die Anfrageformulare öffnen sich, versenden aber noch keine Nachricht.</p>
+      </div>
+    </section>
+    <section class="section events-next"><div><p class="eyebrow">VORSCHAU</p><h2>Vom Entwurf zur echten Seite.</h2></div><p>Nach Ihrer Rückmeldung ersetzen wir die markierten Platzhalter durch Betriebsfotos und ergänzen bestätigte Texte, Anfrageformulare sowie die mobile Feinarbeit.</p></section>
+  </main>
+  <footer id="kontakt" class="site-footer"><div><strong>TASTE OF EDEN</strong><p>Lindenstrasse 21 · 9000 St. Gallen</p><p><a href="tel:+41768411993">+41 76 841 1993</a> · <a href="mailto:tasteofedenklg@gmail.com">tasteofedenklg@gmail.com</a></p></div><p>Website-Entwurf zur Abstimmung · noch nicht die offizielle Restaurantseite</p><a href="index.html">Zur Startseite</a></footer>
+  <dialog class="inquiry-dialog" aria-labelledby="inquiry-title"><button class="dialog-close" type="button" aria-label="Anfrage schliessen">×</button><p class="eyebrow">ANFRAGE · VORSCHAU</p><h2 id="inquiry-title">Anfrage</h2><p>Dieses Formular öffnet einen E-Mail-Entwurf. Es sendet und speichert selbst keine Daten.</p><form id="inquiry-form"><label>Ihr Name<input name="name" autocomplete="name" placeholder="Name" required></label><label>E-Mail<input name="email" type="email" autocomplete="email" placeholder="E-Mail" required></label><label>Termin / Anlass<input name="event" placeholder="Wann und wofür?"></label><label>Ihre Nachricht<textarea name="message" rows="4" placeholder="Was planen Sie?"></textarea></label><button class="button button-gold" type="submit">E-Mail-Entwurf öffnen</button><p class="form-status" role="status" aria-live="polite"></p></form></dialog>
+  <div class="demo-toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
+
