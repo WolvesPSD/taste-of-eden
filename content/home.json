@@ -10,6 +10,11 @@
     {"title": "Desserts", "description": "Zum Beispiel der Briochemuffin.", "image": "assets/briochemuffin.webp", "alt": "Briochemuffin mit Blaubeeren"}
   ],
   "gallery_intro": "Einblicke in unsere Speisen, Getränke und das Restaurant.",
+  "about_eyebrow": "ÜBER UNS",
+  "about_title": "Gutes Essen.\nEin guter Moment.",
+  "about_text": "Willkommen bei Taste of Eden in St. Gallen. Entdecken Sie unsere Speisen vor Ort oder bestellen Sie über unseren Lieferservice.",
+  "about_image": "",
+  "about_image_alt": "",
   "gallery": [
     {"caption": "Vor Ort", "thumb_label": "Vor Ort", "image": "assets/restaurant_aussen.webp", "alt": "Eingang von Taste of Eden in St. Gallen"},
     {"caption": "Pierogi zum Mitnehmen", "thumb_label": "Pierogi", "image": "assets/pierogi_takeaway_web.webp", "alt": "Pierogi in einer Take-away-Schachtel"},
