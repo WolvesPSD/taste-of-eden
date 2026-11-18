@@ -1,6 +1,6 @@
 # Inhalte am Handy pflegen
 
-**Stand: 18.11.2026.** Die Website ist lokal für Pages CMS vorbereitet. Der Zugang für den Inhaber und die Veröffentlichung über Cloudflare Pages sind noch nicht eingerichtet. Bis dahin ist dies eine Beschreibung der geplanten Bedienung, kein bereits getesteter Zugang.
+**Stand: 18.11.2026.** Die Website ist über [Cloudflare Pages](https://taste-of-eden.pages.dev/) erreichbar. Robert kann die Inhalte in [Pages CMS](https://app.pagescms.org/wolvespsd/taste-of-eden/main) bearbeiten. Ein Speichertest mit anschliessender Rücknahme und automatischer Veröffentlichung war erfolgreich. Der Zugang des Inhabers und die Domain `tasteofeden.ch` sind noch nicht fertig eingerichtet.
 
 ## Zugänge für Inhaber und Robert
 
@@ -30,4 +30,5 @@ Unter **Besonderer Event-Hinweis** zuerst Titel, Datum und Beschreibung eintrage
 
 ## Veröffentlichung
 
-Pages CMS schreibt Änderungen in das Website-Repository; Cloudflare Pages soll daraus automatisch die aktuelle Website erzeugen. Diesen Ablauf erst nach Einrichtung mit einem kleinen Testeintrag prüfen. Vor der Domainumstellung auch DNS, E-Mail-Einträge, Impressum und Datenschutz für das tatsächliche Hosting prüfen. Die jetzige GitHub-Pages-Adresse bleibt bis dahin Vorschau.
+Pages CMS schreibt Änderungen in den Hauptzweig `main` des Website-Projekts. Cloudflare Pages veröffentlicht diese Änderungen automatisch; das wurde mit einem ausgeschalteten Event-Hinweis geprüft. Nach **Save** kann es kurz dauern, bis die Änderung auf der Website erscheint. `tasteofeden.ch` wird erst nach abgeschlossener Nameserver-Umstellung mit der Website verbunden und über HTTPS geprüft. Die frühere GitHub-Pages-Adresse diente nur als Test. Für Kunden bleibt vorerst `tasteofedenklg@gmail.com` die Kontaktadresse; ein Postfach mit `@tasteofeden.ch` ist noch nicht eingerichtet.
+
