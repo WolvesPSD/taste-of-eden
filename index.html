@@ -8,9 +8,9 @@
   <meta name="description" content="Taste of Eden in St. Gallen: Pierogi, Burger, Speisekarte, Foodtruck und Events entdecken.">
   <title>Taste of Eden · St. Gallen</title>
   <link rel="stylesheet" href="styles.css?v=20261118b">
-  <link rel="stylesheet" href="extras.css?v=20261118g">
+  <link rel="stylesheet" href="extras.css?v=20261118h">
   <script src="script.js?v=20261118c" defer></script>
-  <script src="content.js?v=20261118e" defer></script>
+  <script src="content.js?v=20261118f" defer></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -66,6 +66,20 @@
       <div class="special-event-copy"><p class="eyebrow" data-special-eyebrow></p><h2 id="special-home-title" data-special-title></h2><p class="special-event-date" data-special-date></p><p data-special-description></p><div class="special-event-actions"><button class="button button-gold" type="button" data-special-reserve data-inquiry="Reservierung" hidden>Reservierung anfragen</button><a class="text-link" data-special-link hidden></a></div><p class="special-event-notice" data-special-reservation-notice hidden>Reservierungen gelten erst nach Bestätigung durch das Restaurant.</p></div>
     </section>
 
+    <section class="section daily-recommendation" data-daily hidden aria-labelledby="daily-heading">
+      <div class="daily-card">
+        <p class="eyebrow">AUS UNSERER KÜCHE</p>
+        <h2 id="daily-heading">Tagesempfehlung</h2>
+        <figure class="daily-figure">
+          <img data-daily-image alt="" loading="lazy">
+          <figcaption>
+            <h3 data-daily-title></h3>
+            <p data-daily-text></p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section id="speisekarte" class="section section-intro">
       <div class="section-heading">
         <p class="eyebrow">UNSERE AUSWAHL</p>
@@ -100,6 +114,7 @@
       <div class="feature-mark">TASTE<br>OF<br>EDEN</div>
       <div><p class="eyebrow">ÜBER UNS</p><h2>Gutes Essen.<br>Ein guter Moment.</h2></div>
       <p>Willkommen bei Taste of Eden in St. Gallen. Entdecken Sie unsere Speisen vor Ort oder bestellen Sie über unseren Lieferservice.</p>
+      <figure class="about-image" hidden><img alt="" loading="lazy"></figure>
     </section>
 
     <section class="section event-teaser">
