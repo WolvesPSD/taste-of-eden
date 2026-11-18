@@ -1,4 +1,7 @@
 {
-  "enabled": false,
-  "eyebrow": "BESONDERER ANLASS"
+  "enabled": true,
+  "eyebrow": "BESONDERER ANLASS",
+  "title": "Nur Testzweig: Beispiel-Event",
+  "date": "Testdatum",
+  "description": "Dieser Hinweis wird auf der offiziellen Website nicht veröffentlicht."
 }
