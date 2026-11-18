@@ -31,4 +31,3 @@ Unter **Besonderer Event-Hinweis** zuerst Titel, Datum und Beschreibung eintrage
 ## Veröffentlichung
 
 Pages CMS schreibt Änderungen in den Hauptzweig `main` des Website-Projekts. Cloudflare Pages veröffentlicht diese Änderungen automatisch; das wurde mit einem ausgeschalteten Event-Hinweis geprüft. Nach **Save** kann es kurz dauern, bis die Änderung auf der Website erscheint. `tasteofeden.ch` wird erst nach abgeschlossener Nameserver-Umstellung mit der Website verbunden und über HTTPS geprüft. Die frühere GitHub-Pages-Adresse diente nur als Test. Für Kunden bleibt vorerst `tasteofedenklg@gmail.com` die Kontaktadresse; ein Postfach mit `@tasteofeden.ch` ist noch nicht eingerichtet.
-
