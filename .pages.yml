@@ -1,0 +1,122 @@
+media:
+  input: assets
+  output: /assets
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: homepage
+    label: Startseite und Galerie
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: hero
+        label: Titelbilder
+        type: object
+        list:
+          min: 1
+          max: 6
+          collapsible:
+            collapsed: true
+            summary: "Titelbild {index}"
+        fields:
+          - { name: main, label: Grosses Foto, type: image, required: true }
+          - { name: main_alt, label: Beschreibung grosses Foto, type: string, required: true }
+          - { name: secondary, label: Kleines Foto, type: image, required: true }
+          - { name: secondary_alt, label: Beschreibung kleines Foto, type: string, required: true }
+      - name: highlights
+        label: Speisen auf der Startseite
+        type: object
+        list:
+          min: 1
+          max: 6
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - { name: title, label: Titel, type: string, required: true }
+          - { name: description, label: Kurztext, type: text }
+          - { name: image, label: Foto, type: image, required: true }
+          - { name: alt, label: Bildbeschreibung, type: string, required: true }
+      - { name: gallery_intro, label: Einleitung Galerie, type: text }
+      - name: gallery
+        label: Galeriebilder
+        description: Weitere Bilder hinzufügen, entfernen oder in die gewünschte Reihenfolge ziehen.
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{caption}"
+        fields:
+          - { name: caption, label: Bildunterschrift, type: string, required: true }
+          - { name: thumb_label, label: Kurzer Name, type: string, required: true }
+          - { name: image, label: Foto, type: image, required: true }
+          - { name: alt, label: Bildbeschreibung, type: string, required: true }
+
+  - name: menu
+    label: Speisekarte
+    type: file
+    path: content/menu.json
+    format: json
+    fields:
+      - { name: intro, label: Einleitung, type: text }
+      - { name: image, label: Grosses Foto, type: image, required: true }
+      - { name: image_alt, label: Bildbeschreibung, type: string, required: true }
+      - { name: note, label: Hinweis oberhalb der Karte, type: text }
+      - name: categories
+        label: Rubriken
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - { name: eyebrow, label: Kleine Überschrift, type: string }
+          - { name: title, label: Rubrik, type: string, required: true }
+          - name: items
+            label: Gerichte
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - { name: name, label: Speise, type: string, required: true }
+              - { name: price, label: Preis (optional, z. B. CHF 14.50), type: string, description: Leer lassen, um keinen Preis anzuzeigen. }
+          - { name: note, label: Zusatzhinweis, type: text }
+      - { name: closing, label: Text vor dem Bestellknopf, type: text }
+
+  - name: events
+    label: Foodtruck und Events
+    type: file
+    path: content/events.json
+    format: json
+    fields:
+      - { name: lead, label: Einleitung, type: string }
+      - { name: description, label: Haupttext, type: text }
+      - { name: teaser, label: Kurztext auf der Startseite, type: text }
+      - { name: truck_image, label: Foodtruck-Foto, type: image, required: true }
+      - { name: truck_alt, label: Bildbeschreibung Foodtruck, type: string, required: true }
+      - { name: table_image, label: Tischbild, type: image, required: true }
+      - { name: table_alt, label: Bildbeschreibung Tisch, type: string, required: true }
+      - { name: dish_image, label: Speisen-Foto, type: image, required: true }
+      - { name: dish_alt, label: Bildbeschreibung Speise, type: string, required: true }
+
+  - name: special
+    label: Besonderer Event-Hinweis
+    type: file
+    path: content/special.json
+    format: json
+    fields:
+      - { name: enabled, label: Hinweis auf der Website anzeigen, type: boolean }
+      - { name: eyebrow, label: Kleine Überschrift, type: string }
+      - { name: title, label: Name des Events, type: string }
+      - { name: date, label: Datum oder Zeitraum als Text, type: string }
+      - { name: description, label: Beschreibung, type: text }
+      - { name: image, label: Event-Foto (optional), type: image }
+      - { name: image_alt, label: Bildbeschreibung (falls Foto gewählt), type: string }
+      - { name: link_label, label: Link-Text (optional), type: string }
+      - { name: link_url, label: Link-Ziel (optional), type: string }

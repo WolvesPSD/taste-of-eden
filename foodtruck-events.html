@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#173127">
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <meta name="description" content="Visueller Website-Entwurf: Foodtruck & Events von Taste of Eden.">
-  <title>Taste of Eden – Foodtruck & Events · Vorschau</title>
-  <link rel="stylesheet" href="styles.css?v=20261009b">
-  <link rel="stylesheet" href="extras.css?v=20261009d">
-  <script src="script.js?v=20261009d" defer></script>
+  <meta name="description" content="Foodtruck und Catering von Taste of Eden in St. Gallen anfragen.">
+  <title>Foodtruck & Events · Taste of Eden</title>
+  <link rel="stylesheet" href="styles.css?v=20261118b">
+  <link rel="stylesheet" href="extras.css?v=20261118d">
+  <script src="script.js?v=20261118b" defer></script>
+  <script src="content.js?v=20261118b" defer></script>
 </head>
 <body data-page="events">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
-  <div class="preview-ribbon">WEBSITE-VORSCHAU · NOCH NICHT DIE OFFIZIELLE RESTAURANTSEITE</div>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Taste of Eden – Startseite"><img src="assets/logo.png" alt="Taste of Eden Logo" width="68" height="68"><span class="brand-wordmark"><strong>TASTE OF EDEN</strong><small>ST. GALLEN</small></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">☰</button>
@@ -24,11 +24,10 @@
 
   <main id="main" class="page-content events-main">
     <section class="events-layout">
-      <div class="events-images" aria-label="Geplante Bildfolge">
+      <div class="events-images" aria-label="Bilder zu Foodtruck und Events">
         <figure class="events-truck"><img src="assets/foodtruck.png" alt="Beschrifteter Taste-of-Eden-Foodtruck mit Pierogi- und Burger-Motiven"><figcaption>Unser Foodtruck</figcaption><button class="truck-secret" type="button" aria-label="Foodtruck-Überraschung starten" title="Ein kleiner Stern">✦</button><div class="truck-surprise" aria-hidden="true"><span class="truck-mini"><span class="truck-mini-box">TASTE<br>OF EDEN</span><span class="truck-mini-cab"></span><i></i><i></i></span><span class="truck-message">Bis bald!</span></div><span class="truck-live visually-hidden" role="status" aria-live="polite"></span></figure>
         <figure class="events-table-visual">
-          <img src="assets/tisch_visualisierung_v1.webp" alt="Visualisierung eines für vier Personen gedeckten Holztisches im Garten; kein Foto des Restaurants">
-          <span class="table-visual-label">VISUALISIERUNG · ORIGINALFOTO FOLGT</span>
+          <img src="assets/tisch_visualisierung_v1.webp" alt="Für vier Personen gedeckter Holztisch im Grünen">
           <figcaption>Raum für gemeinsame Momente</figcaption>
         </figure>
         <figure class="events-dish"><img src="assets/pierogi_takeaway_web.webp" alt="Pierogi von Taste of Eden in einer Take-away-Schachtel"><figcaption>Pierogi zum Mitnehmen</figcaption></figure>
@@ -39,16 +38,17 @@
         <p class="events-lead">Guter Geschmack kommt zu Ihnen.</p>
         <div class="divider"></div>
         <p>Ob bei Ihnen zu Hause, am Wunschort oder direkt vor Ort: Wir gestalten Essen für Ihren Anlass. Erzählen Sie uns, was Sie planen – wir melden uns mit einer passenden Idee.</p>
-        <p class="draft-note">Textentwurf zur Abstimmung. Umfang, Einsatzgebiet und Leistungen müssen vom Betreiber bestätigt werden.</p>
         <div class="events-actions" id="anfragen"><button class="button button-gold" type="button" data-inquiry="Foodtruck">Foodtruck anfragen <span aria-hidden="true">→</span></button><button class="button button-outline-dark" type="button" data-inquiry="Catering">Catering anfragen <span aria-hidden="true">→</span></button></div>
-        <p class="form-notice">Demo: Die Anfrageformulare öffnen sich, versenden aber noch keine Nachricht.</p>
+        <p class="form-notice">Für Ihre Anfrage öffnet sich Ihr E-Mail-Programm. Sie können die Nachricht dort prüfen und versenden.</p>
       </div>
     </section>
-    <section class="section events-next"><div><p class="eyebrow">VORSCHAU</p><h2>Vom Entwurf zur echten Seite.</h2></div><p>Die Tischszene ist eine Visualisierung und zeigt weder das Restaurant noch ein durchgeführtes Catering. Für die endgültige Seite brauchen wir ein Foto des heutigen Betriebs sowie bestätigte Texte und Leistungen.</p></section>
+    <section class="section special-event" data-special hidden aria-labelledby="special-events-title">
+      <div class="special-event-copy"><p class="eyebrow" data-special-eyebrow></p><h2 id="special-events-title" data-special-title></h2><p class="special-event-date" data-special-date></p><p data-special-description></p><a class="text-link" data-special-link hidden></a></div>
+      <img data-special-image hidden alt="" loading="lazy">
+    </section>
   </main>
-  <footer id="kontakt" class="site-footer"><div><strong>TASTE OF EDEN</strong><p>Lindenstrasse 21 · 9000 St. Gallen</p><p><a href="tel:+41768411993">+41 76 841 1993</a> · <a href="mailto:tasteofedenklg@gmail.com">tasteofedenklg@gmail.com</a></p></div><p>Website-Entwurf zur Abstimmung · noch nicht die offizielle Restaurantseite</p><div class="footer-links"><a href="https://www.instagram.com/tasteofedenklg/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="impressum.html">Impressum</a></div></footer>
-  <dialog class="inquiry-dialog" aria-labelledby="inquiry-title"><button class="dialog-close" type="button" aria-label="Anfrage schliessen">×</button><p class="eyebrow">ANFRAGE · VORSCHAU</p><h2 id="inquiry-title">Anfrage</h2><p>Dieses Formular öffnet einen E-Mail-Entwurf. Es sendet und speichert selbst keine Daten.</p><form id="inquiry-form"><label>Ihr Name<input name="name" autocomplete="name" placeholder="Name" required></label><label>E-Mail<input name="email" type="email" autocomplete="email" placeholder="E-Mail" required></label><label>Termin / Anlass<input name="event" placeholder="Wann und wofür?"></label><label>Ihre Nachricht<textarea name="message" rows="4" placeholder="Was planen Sie?"></textarea></label><button class="button button-gold" type="submit">E-Mail-Entwurf öffnen</button><p class="form-status" role="status" aria-live="polite"></p></form></dialog>
-  <div class="demo-toast" role="status" aria-live="polite" hidden></div>
+  <footer id="kontakt" class="site-footer"><div><strong>TASTE OF EDEN</strong><p>Lindenstrasse 21 · 9000 St. Gallen</p><p><a href="tel:+41768411993">+41 76 841 1993</a> · <a href="mailto:tasteofedenklg@gmail.com">tasteofedenklg@gmail.com</a></p></div><p>© Taste of Eden</p><div class="footer-links"><a href="https://www.instagram.com/tasteofedenklg/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></footer>
+  <dialog class="inquiry-dialog" aria-labelledby="inquiry-title"><button class="dialog-close" type="button" aria-label="Anfrage schliessen">×</button><p class="eyebrow">IHRE ANFRAGE</p><h2 id="inquiry-title">Anfrage</h2><p>Dieses Formular öffnet einen E-Mail-Entwurf. Es sendet und speichert selbst keine Daten.</p><form id="inquiry-form"><label>Ihr Name<input name="name" autocomplete="name" placeholder="Name" required></label><label>E-Mail<input name="email" type="email" autocomplete="email" placeholder="E-Mail" required></label><label>Termin / Anlass<input name="event" placeholder="Wann und wofür?"></label><label>Ihre Nachricht<textarea name="message" rows="4" placeholder="Was planen Sie?"></textarea></label><button class="button button-gold" type="submit">E-Mail-Entwurf öffnen</button><p class="form-status" role="status" aria-live="polite"></p></form></dialog>
 </body>
 </html>
 

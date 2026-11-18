@@ -14,17 +14,7 @@ if (toggle && nav) {
   }));
 }
 
-const toast = document.querySelector('.demo-toast');
-let toastTimer;
-document.querySelectorAll('.demo-button').forEach(button => button.addEventListener('click', () => {
-  if (!toast) return;
-  toast.textContent = `${button.dataset.demo}: Diese Funktion ist in der Vorschau noch nicht verbunden.`;
-  toast.hidden = false;
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => { toast.hidden = true; }, 5000);
-}));
-
-const slides = [...document.querySelectorAll('[data-slide]')];
+let slides = [...document.querySelectorAll('[data-slide]')];
 const counter = document.querySelector('.hero-count');
 let slideIndex = 0;
 function showSlide(index) {
@@ -40,13 +30,17 @@ function showSlide(index) {
 document.querySelectorAll('[data-carousel]').forEach(button => button.addEventListener('click', () => {
   showSlide(slideIndex + (button.dataset.carousel === 'next' ? 1 : -1));
 }));
+document.addEventListener('sitecontent:hero', () => {
+  slides = [...document.querySelectorAll('[data-slide]')];
+  showSlide(0);
+});
 
 const galleryImage = document.querySelector('#gallery-feature-image');
 const galleryCaption = document.querySelector('#gallery-feature-caption');
-const galleryThumbs = [...document.querySelectorAll('.gallery-thumb')];
+let galleryThumbs = [...document.querySelectorAll('.gallery-thumb')];
 let galleryIndex = 0;
 function showGallery(index) {
-  if (!galleryImage || !galleryCaption) return;
+  if (!galleryImage || !galleryCaption || !galleryThumbs.length) return;
   galleryIndex = (index + galleryThumbs.length) % galleryThumbs.length;
   const button = galleryThumbs[galleryIndex];
   galleryImage.src = button.dataset.gallerySrc;
@@ -55,7 +49,15 @@ function showGallery(index) {
   galleryThumbs.forEach(thumb => thumb.setAttribute('aria-pressed', String(thumb === button)));
   button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 }
-galleryThumbs.forEach((button, index) => button.addEventListener('click', () => showGallery(index)));
+document.querySelector('.gallery-thumbs')?.addEventListener('click', event => {
+  const button = event.target.closest('.gallery-thumb');
+  const index = galleryThumbs.indexOf(button);
+  if (index >= 0) showGallery(index);
+});
+document.addEventListener('sitecontent:gallery', () => {
+  galleryThumbs = [...document.querySelectorAll('.gallery-thumb')];
+  showGallery(0);
+});
 document.querySelectorAll('[data-gallery-step]').forEach(button => button.addEventListener('click', () => {
   showGallery(galleryIndex + Number(button.dataset.galleryStep));
 }));
