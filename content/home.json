@@ -1,26 +1,90 @@
 {
   "hero": [
-    {"main": "assets/pierogi.jpg", "main_alt": "Pierogi von Taste of Eden auf einem Teller", "secondary": "assets/burger.jpg", "secondary_alt": "Burger mit Pommes von Taste of Eden"},
-    {"main": "assets/burger.jpg", "main_alt": "Burger mit Pommes von Taste of Eden", "secondary": "assets/pierogi.jpg", "secondary_alt": "Pierogi von Taste of Eden"},
-    {"main": "assets/dessert.jpg", "main_alt": "Dessert von Taste of Eden", "secondary": "assets/pierogi.jpg", "secondary_alt": "Pierogi von Taste of Eden"}
+    {
+      "main": "/assets/pierogi.jpg",
+      "main_alt": "Pierogi von Taste of Eden auf einem Teller",
+      "secondary": "/assets/burger.jpg",
+      "secondary_alt": "Burger mit Pommes von Taste of Eden"
+    },
+    {
+      "main": "/assets/burger.jpg",
+      "main_alt": "Burger mit Pommes von Taste of Eden",
+      "secondary": "/assets/pierogi.jpg",
+      "secondary_alt": "Pierogi von Taste of Eden"
+    },
+    {
+      "main": "/assets/dessert.jpg",
+      "main_alt": "Dessert von Taste of Eden",
+      "secondary": "/assets/pierogi.jpg",
+      "secondary_alt": "Pierogi von Taste of Eden"
+    }
   ],
   "highlights": [
-    {"title": "Pierogi", "description": "Entdecken Sie unsere verschiedenen Füllungen.", "image": "assets/pierogi_teller.webp", "alt": "Pierogi auf einem Teller"},
-    {"title": "Burger & Pommes", "description": "Auswahl rund um die EdenSmash-Burger.", "image": "assets/burger_pommes.webp", "alt": "Burger mit Pommes"},
-    {"title": "Desserts", "description": "Zum Beispiel der Briochemuffin.", "image": "assets/briochemuffin.webp", "alt": "Briochemuffin mit Blaubeeren"}
+    {
+      "title": "Pierogi",
+      "description": "Entdecken Sie unsere verschiedenen Füllungen.",
+      "image": "/assets/pierogi_teller.webp",
+      "alt": "Pierogi auf einem Teller"
+    },
+    {
+      "title": "Burger & Pommes",
+      "description": "Auswahl rund um die EdenSmash-Burger.",
+      "image": "/assets/burger_pommes.webp",
+      "alt": "Burger mit Pommes"
+    },
+    {
+      "title": "Desserts",
+      "description": "Zum Beispiel der Briochemuffin.",
+      "image": "/assets/briochemuffin.webp",
+      "alt": "Briochemuffin mit Blaubeeren"
+    }
   ],
   "gallery_intro": "Einblicke in unsere Speisen, Getränke und das Restaurant.",
   "about_eyebrow": "ÜBER UNS",
   "about_title": "Gutes Essen.\nEin guter Moment.",
   "about_text": "Willkommen bei Taste of Eden in St. Gallen. Entdecken Sie unsere Speisen vor Ort oder bestellen Sie über unseren Lieferservice.",
-  "about_image": "",
-  "about_image_alt": "",
   "gallery": [
-    {"caption": "Vor Ort", "thumb_label": "Vor Ort", "image": "assets/restaurant_aussen.webp", "alt": "Eingang von Taste of Eden in St. Gallen"},
-    {"caption": "Pierogi zum Mitnehmen", "thumb_label": "Pierogi", "image": "assets/pierogi_takeaway_web.webp", "alt": "Pierogi in einer Take-away-Schachtel"},
-    {"caption": "Haus-Eistee", "thumb_label": "Eistee", "image": "assets/haus_eistee.webp", "alt": "Haus-Eistee im Glas auf dem Gartentisch"},
-    {"caption": "Burger & Pommes", "thumb_label": "Burger", "image": "assets/burger_pommes.webp", "alt": "Burger mit Pommes auf dem Teller"},
-    {"caption": "Hausgemachtes Dessert", "thumb_label": "Dessert", "image": "assets/briochemuffin.webp", "alt": "Briochemuffin mit Blaubeeren"},
-    {"caption": "Zum Teilen und Probieren", "thumb_label": "Saucen", "image": "assets/saucen.webp", "alt": "Verschiedene Saucen auf einem Holztisch"}
+    {
+      "caption": "Vor Ort",
+      "thumb_label": "Vor Ort",
+      "image": "/assets/restaurant_aussen.webp",
+      "alt": "Eingang von Taste of Eden in St. Gallen"
+    },
+    {
+      "caption": "Pierogi zum Mitnehmen",
+      "thumb_label": "Pierogi",
+      "image": "/assets/pierogi_takeaway_web.webp",
+      "alt": "Pierogi in einer Take-away-Schachtel"
+    },
+    {
+      "caption": "Haus-Eistee",
+      "thumb_label": "Eistee",
+      "image": "/assets/haus_eistee.webp",
+      "alt": "Haus-Eistee im Glas auf dem Gartentisch"
+    },
+    {
+      "caption": "Burger & Pommes",
+      "thumb_label": "Burger",
+      "image": "/assets/burger_pommes.webp",
+      "alt": "Burger mit Pommes auf dem Teller"
+    },
+    {
+      "caption": "Hausgemachtes Dessert",
+      "thumb_label": "Dessert",
+      "image": "/assets/briochemuffin.webp",
+      "alt": "Briochemuffin mit Blaubeeren"
+    },
+    {
+      "caption": "Zum Teilen und Probieren",
+      "thumb_label": "Saucen",
+      "image": "/assets/saucen.webp",
+      "alt": "Verschiedene Saucen auf einem Holztisch"
+    },
+    {
+      "caption": "Ich bin ein Test",
+      "thumb_label": "Test",
+      "image": "/assets/dozynki_rahmen.png",
+      "alt": "Ich wollte ein Test sein"
+    }
   ]
 }
