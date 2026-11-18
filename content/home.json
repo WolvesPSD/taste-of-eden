@@ -79,12 +79,6 @@
       "thumb_label": "Saucen",
       "image": "/assets/saucen.webp",
       "alt": "Verschiedene Saucen auf einem Holztisch"
-    },
-    {
-      "caption": "Ich bin ein Test",
-      "thumb_label": "Test",
-      "image": "/assets/dozynki_rahmen.png",
-      "alt": "Ich wollte ein Test sein"
     }
   ]
 }
