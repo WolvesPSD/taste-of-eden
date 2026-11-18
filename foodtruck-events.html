@@ -8,9 +8,9 @@
   <meta name="description" content="Foodtruck und Catering von Taste of Eden in St. Gallen anfragen.">
   <title>Foodtruck & Events · Taste of Eden</title>
   <link rel="stylesheet" href="styles.css?v=20261118b">
-  <link rel="stylesheet" href="extras.css?v=20261118d">
-  <script src="script.js?v=20261118b" defer></script>
-  <script src="content.js?v=20261118b" defer></script>
+  <link rel="stylesheet" href="extras.css?v=20261118e">
+  <script src="script.js?v=20261118c" defer></script>
+  <script src="content.js?v=20261118c" defer></script>
 </head>
 <body data-page="events">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -23,6 +23,10 @@
   <aside class="side-nav" aria-label="Schnellzugriff"><a href="https://www.just-eat.ch/speisekarte/taste-of-eden" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span><span>Hier<br>bestellen</span></a><a href="speisekarte.html"><span aria-hidden="true">♧</span><span>Speisekarte</span></a><a href="#catering-anfrage" data-inquiry="Catering"><span aria-hidden="true">✦</span><span>Catering<br>anfragen</span></a><a href="#foodtruck-anfrage" data-inquiry="Foodtruck"><span aria-hidden="true">▱</span><span>Foodtruck<br>anfragen</span></a><a href="index.html#galerie"><span aria-hidden="true">▧</span><span>Galerie</span></a><a href="index.html#ueber-uns"><span aria-hidden="true">◈</span><span>Über uns</span></a><a href="impressum.html"><span aria-hidden="true">§</span><span>Impressum</span></a></aside>
 
   <main id="main" class="page-content events-main">
+    <section class="section special-event special-event--top" data-special hidden aria-labelledby="special-events-title">
+      <img data-special-image hidden alt="" loading="lazy">
+      <div class="special-event-copy"><p class="eyebrow" data-special-eyebrow></p><h2 id="special-events-title" data-special-title></h2><p class="special-event-date" data-special-date></p><p data-special-description></p><div class="special-event-actions"><button class="button button-gold" type="button" data-special-reserve data-inquiry="Reservierung" hidden>Reservierung anfragen</button><a class="text-link" data-special-link hidden></a></div><p class="special-event-notice" data-special-reservation-notice hidden>Reservierungen gelten erst nach Bestätigung durch das Restaurant.</p></div>
+    </section>
     <section class="events-layout">
       <div class="events-images" aria-label="Bilder zu Foodtruck und Events">
         <figure class="events-truck"><img src="assets/foodtruck.png" alt="Beschrifteter Taste-of-Eden-Foodtruck mit Pierogi- und Burger-Motiven"><figcaption>Unser Foodtruck</figcaption><button class="truck-secret" type="button" aria-label="Foodtruck-Überraschung starten" title="Ein kleiner Stern">✦</button><div class="truck-surprise" aria-hidden="true"><span class="truck-mini"><span class="truck-mini-box">TASTE<br>OF EDEN</span><span class="truck-mini-cab"></span><i></i><i></i></span><span class="truck-message">Bis bald!</span></div><span class="truck-live visually-hidden" role="status" aria-live="polite"></span></figure>
@@ -42,13 +46,9 @@
         <p class="form-notice">Für Ihre Anfrage öffnet sich Ihr E-Mail-Programm. Sie können die Nachricht dort prüfen und versenden.</p>
       </div>
     </section>
-    <section class="section special-event" data-special hidden aria-labelledby="special-events-title">
-      <div class="special-event-copy"><p class="eyebrow" data-special-eyebrow></p><h2 id="special-events-title" data-special-title></h2><p class="special-event-date" data-special-date></p><p data-special-description></p><a class="text-link" data-special-link hidden></a></div>
-      <img data-special-image hidden alt="" loading="lazy">
-    </section>
   </main>
   <footer id="kontakt" class="site-footer"><div><strong>TASTE OF EDEN</strong><p>Lindenstrasse 21 · 9000 St. Gallen</p><p><a href="tel:+41768411993">+41 76 841 1993</a> · <a href="mailto:tasteofedenklg@gmail.com">tasteofedenklg@gmail.com</a></p></div><p>© Taste of Eden</p><div class="footer-links"><a href="https://www.instagram.com/tasteofedenklg/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></footer>
-  <dialog class="inquiry-dialog" aria-labelledby="inquiry-title"><button class="dialog-close" type="button" aria-label="Anfrage schliessen">×</button><p class="eyebrow">IHRE ANFRAGE</p><h2 id="inquiry-title">Anfrage</h2><p>Dieses Formular öffnet einen E-Mail-Entwurf. Es sendet und speichert selbst keine Daten.</p><form id="inquiry-form"><label>Ihr Name<input name="name" autocomplete="name" placeholder="Name" required></label><label>E-Mail<input name="email" type="email" autocomplete="email" placeholder="E-Mail" required></label><label>Termin / Anlass<input name="event" placeholder="Wann und wofür?"></label><label>Ihre Nachricht<textarea name="message" rows="4" placeholder="Was planen Sie?"></textarea></label><button class="button button-gold" type="submit">E-Mail-Entwurf öffnen</button><p class="form-status" role="status" aria-live="polite"></p></form></dialog>
+  <dialog class="inquiry-dialog" aria-labelledby="inquiry-title"><button class="dialog-close" type="button" aria-label="Anfrage schliessen">×</button><p class="eyebrow">IHRE ANFRAGE</p><h2 id="inquiry-title">Anfrage</h2><p data-inquiry-intro>Dieses Formular öffnet einen E-Mail-Entwurf. Es sendet und speichert selbst keine Daten.</p><form id="inquiry-form"><label>Ihr Name<input name="name" autocomplete="name" placeholder="Name" required></label><label>E-Mail<input name="email" type="email" autocomplete="email" placeholder="E-Mail" required></label><label><span data-inquiry-date-label>Termin / Anlass</span><input name="event" placeholder="Wann und wofür?"></label><label data-reservation-guests hidden>Personen<input name="guests" type="number" min="1" inputmode="numeric"></label><label>Ihre Nachricht<textarea name="message" rows="4" placeholder="Was planen Sie?"></textarea></label><button class="button button-gold" type="submit">E-Mail-Entwurf öffnen</button><p class="form-status" role="status" aria-live="polite"></p></form></dialog>
 </body>
 </html>
 

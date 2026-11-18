@@ -46,6 +46,19 @@
 .special-event-copy{max-width:700px}.special-event .eyebrow{color:#8a6330}.special-event h2{max-width:680px}.special-event-date{margin:22px 0 12px;color:#76501f;font:700 17px/1.5 Arial,sans-serif}.special-event-copy>p:not(.eyebrow):not(.special-event-date){font:17px/1.65 Arial,sans-serif;color:#435348}.special-event img{width:100%;max-height:390px;aspect-ratio:4/3;object-fit:cover;border-radius:4px}.special-event:not(:has(img:not([hidden]))){grid-template-columns:1fr}
 @media(max-width:760px){.special-event{display:block}.special-event img{margin-top:28px;max-height:300px}.menu-category li{font-size:15px}}
 
+/* Ein aktiver Event steht auf beiden Seiten unmittelbar unter der Navigation. */
+.special-event--top{padding:clamp(25px,3vw,45px) clamp(28px,6vw,110px);background:#f3ead4;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);border-top:4px solid var(--gold)}
+.special-event--top .eyebrow{margin-bottom:10px}
+.special-event--top h2{font-size:clamp(34px,3.5vw,54px);line-height:1.08}
+.special-event--top .special-event-date{margin:12px 0 6px}
+.special-event--top .special-event-copy>p:not(.eyebrow):not(.special-event-date):not(.special-event-notice){margin:9px 0 0;max-width:680px}
+.special-event--top img{width:100%;max-height:min(68vh,620px);height:auto;aspect-ratio:auto;object-fit:contain;background:#fffaf0;box-shadow:0 8px 32px #1a2b1b25}
+.special-event-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin-top:18px}
+.special-event-actions .button{min-height:44px;font-size:15px;padding:9px 17px}
+.special-event .special-event-notice{margin:11px 0 0;font:12px/1.5 Arial,sans-serif;color:#5d654f}
+.inquiry-dialog [hidden]{display:none!important}
+@media(max-width:760px){.special-event--top{padding:20px 20px 28px}.special-event--top h2{font-size:clamp(30px,8vw,42px)}.special-event--top img{margin:0 0 24px;max-height:65vh}.special-event-actions .button{width:100%}}
+
 /* Foodtruck-Seite: kompakte Desktop-Bildgruppe, Text sofort am Seitenanfang. */
 @media(min-width:761px){
   .events-layout{min-height:0;align-items:start;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2vw,36px)}

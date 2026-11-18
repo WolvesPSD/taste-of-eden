@@ -129,32 +129,64 @@ const dialog = document.querySelector('.inquiry-dialog');
 const inquiryTitle = document.querySelector('#inquiry-title');
 const inquiryForm = document.querySelector('#inquiry-form');
 let inquiryType = 'Foodtruck';
-function openInquiry(type) {
+let inquiryEventTitle = '';
+function openInquiry(type, eventTitle = '') {
   if (!dialog || !inquiryTitle) return;
-  inquiryType = type === 'Catering' ? 'Catering' : 'Foodtruck';
-  inquiryTitle.textContent = `${inquiryType} anfragen`;
+  inquiryType = ['Catering', 'Foodtruck', 'Reservierung'].includes(type) ? type : 'Foodtruck';
+  inquiryEventTitle = inquiryType === 'Reservierung' ? eventTitle : '';
+  inquiryTitle.textContent = inquiryType === 'Reservierung' ? 'Reservierung anfragen' : `${inquiryType} anfragen`;
   inquiryForm?.reset();
+  const reservation = inquiryType === 'Reservierung';
+  const dateInput = inquiryForm?.elements.namedItem('event');
+  if (dateInput) {
+    dateInput.required = reservation;
+    dateInput.placeholder = reservation ? 'Datum und Uhrzeit' : 'Wann und wofür?';
+  }
+  const dateLabel = dialog.querySelector('[data-inquiry-date-label]');
+  if (dateLabel) dateLabel.textContent = reservation ? 'Wunschtermin' : 'Termin / Anlass';
+  const guestsLabel = dialog.querySelector('[data-reservation-guests]');
+  if (guestsLabel) guestsLabel.hidden = !reservation;
+  const guestsInput = inquiryForm?.elements.namedItem('guests');
+  if (guestsInput) guestsInput.required = reservation;
+  const intro = dialog.querySelector('[data-inquiry-intro]');
+  if (intro) intro.textContent = reservation
+    ? 'Das Formular öffnet einen E-Mail-Entwurf. Die Anfrage wird erst versendet, wenn Sie die Nachricht dort abschicken. Eine Reservierung gilt erst nach Bestätigung durch das Restaurant.'
+    : 'Dieses Formular öffnet einen E-Mail-Entwurf. Es sendet und speichert selbst keine Daten.';
   const status = dialog.querySelector('.form-status');
   if (status) status.textContent = '';
   if (!dialog.open) dialog.showModal();
 }
 document.querySelectorAll('[data-inquiry]').forEach(button => button.addEventListener('click', event => {
   event.preventDefault();
-  openInquiry(button.dataset.inquiry);
+  const eventTitle = button.closest('[data-special]')?.querySelector('[data-special-title]')?.textContent?.trim() || '';
+  openInquiry(button.dataset.inquiry, eventTitle);
 }));
 dialog?.querySelector('.dialog-close')?.addEventListener('click', () => dialog.close());
 dialog?.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 inquiryForm?.addEventListener('submit', event => {
   event.preventDefault();
   const data = new FormData(inquiryForm);
-  const subject = `Taste of Eden – ${inquiryType}-Anfrage`;
-  const body = [
-    `Name: ${data.get('name') || ''}`,
-    `E-Mail: ${data.get('email') || ''}`,
-    `Termin / Anlass: ${data.get('event') || ''}`,
-    '',
-    String(data.get('message') || '')
-  ].join('\n');
+  const reservation = inquiryType === 'Reservierung';
+  const subject = reservation
+    ? `Taste of Eden – Reservierungsanfrage${inquiryEventTitle ? `: ${inquiryEventTitle}` : ''}`
+    : `Taste of Eden – ${inquiryType}-Anfrage`;
+  const body = reservation
+    ? [
+      `Event: ${inquiryEventTitle || 'Besonderer Anlass'}`,
+      `Name: ${data.get('name') || ''}`,
+      `E-Mail: ${data.get('email') || ''}`,
+      `Wunschtermin: ${data.get('event') || ''}`,
+      `Personen: ${data.get('guests') || ''}`,
+      '',
+      String(data.get('message') || '')
+    ].join('\n')
+    : [
+      `Name: ${data.get('name') || ''}`,
+      `E-Mail: ${data.get('email') || ''}`,
+      `Termin / Anlass: ${data.get('event') || ''}`,
+      '',
+      String(data.get('message') || '')
+    ].join('\n');
   const mailto = `mailto:tasteofedenklg@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   const status = dialog?.querySelector('.form-status');
   if (status) status.textContent = 'Ihr E-Mail-Programm sollte jetzt einen Entwurf öffnen. Die Nachricht wurde noch nicht versendet.';

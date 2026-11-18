@@ -115,7 +115,9 @@ content:
       - { name: title, label: Name des Events, type: string }
       - { name: date, label: Datum oder Zeitraum als Text, type: string }
       - { name: description, label: Beschreibung, type: text }
-      - { name: image, label: Event-Foto (optional), type: image }
+      - { name: image, label: Event-Flyer oder Foto (optional), type: image, description: Das ganze Bild wird ohne Beschnitt angezeigt. }
       - { name: image_alt, label: Bildbeschreibung (falls Foto gewählt), type: string }
+      - { name: reservation_enabled, label: Reservierung für diesen Event anbieten, type: boolean, description: Öffnet einen E-Mail-Entwurf. Die Reservierung gilt erst nach Bestätigung durch das Restaurant. }
+      - { name: reservation_label, label: Text auf dem Reservierungsknopf (optional), type: string }
       - { name: link_label, label: Link-Text (optional), type: string }
       - { name: link_url, label: Link-Ziel (optional), type: string }
