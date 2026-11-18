@@ -1,0 +1,11 @@
+{
+  "lead": "Guter Geschmack kommt zu Ihnen.",
+  "description": "Ob bei Ihnen zu Hause, am Wunschort oder direkt vor Ort: Wir gestalten Essen für Ihren Anlass. Erzählen Sie uns, was Sie planen – wir melden uns mit einer passenden Idee.",
+  "teaser": "Foodtruck und Catering für Ihren Anlass. Erzählen Sie uns, was Sie planen.",
+  "truck_image": "assets/foodtruck.png",
+  "truck_alt": "Beschrifteter Taste-of-Eden-Foodtruck mit Pierogi- und Burger-Motiven",
+  "table_image": "assets/tisch_visualisierung_v1.webp",
+  "table_alt": "Für vier Personen gedeckter Holztisch im Grünen",
+  "dish_image": "assets/pierogi_takeaway_web.webp",
+  "dish_alt": "Pierogi von Taste of Eden in einer Take-away-Schachtel"
+}

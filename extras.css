@@ -6,15 +6,15 @@
 .events-table-visual{margin:0;position:relative;overflow:hidden;border-radius:5px;min-height:0;background:#7c745e;color:#fff}
 .events-table-visual img{width:100%;height:100%;object-fit:cover;object-position:center 51%}
 .events-table-visual:after{content:"";position:absolute;inset:42% 0 0;background:linear-gradient(transparent,#0b1b14a6);pointer-events:none}
-.table-visual-label,.events-table-visual figcaption{position:absolute;z-index:1;left:16px;font-family:Arial,sans-serif}
-.table-visual-label{top:13px;padding:7px 9px;background:#173127e8;border:1px solid #f6f0d080;font-size:9px;font-weight:700;letter-spacing:.1em}
+.events-table-visual figcaption{position:absolute;z-index:1;left:16px;font-family:Arial,sans-serif}
 .events-table-visual figcaption{bottom:13px;right:12px;font-size:15px;font-weight:700;text-shadow:0 1px 8px #0009}
-@media(max-width:760px){.events-table-visual{height:180px}.table-visual-label{left:8px;top:8px;font-size:7px;padding:5px}.events-table-visual figcaption{left:9px;bottom:9px;font-size:11px}}
+@media(max-width:760px){.events-table-visual{height:180px}.events-table-visual figcaption{left:9px;bottom:9px;font-size:11px}}
 
 .side-nav{overflow-y:auto}.side-nav a{max-height:none;min-height:70px}.side-nav a[aria-current="page"]{background:#ffffff20;border-left:3px solid var(--gold)}
 .top-nav .mobile-menu-link{display:none}
 .footer-links{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
 .inline-link,.legal-source a,.legal-card a{text-decoration:underline;text-underline-offset:3px}.section-link{margin-top:24px}
+.legal-grid:has(> :only-child){grid-template-columns:minmax(0,1fr);max-width:980px}.privacy-content{max-width:980px;padding:0 clamp(24px,6vw,100px) 76px}.privacy-content section{border-top:1px solid #ded9ca;padding:25px 0}.privacy-content h2{font-size:clamp(26px,2.7vw,36px);font-weight:500;margin:0 0 12px}.privacy-content p{font:16px/1.7 Arial,sans-serif;color:#35483a;max-width:800px;margin:0}.privacy-content a{text-decoration:underline;text-underline-offset:3px}
 .event-photo{min-height:420px;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:15px;text-align:center;color:#fff;background-image:linear-gradient(90deg,#0d241ce8,#153328bd 53%,#183728aa),url('assets/foodtruck.png');background-size:cover;background-position:center 55%;position:relative;overflow:hidden}
 .event-photo:before{content:"";position:absolute;inset:24px;border:1px solid #fff8}.event-photo>*{position:relative;z-index:1;text-shadow:0 2px 14px #07140bcc}.event-photo-kicker{font:700 10px Arial,sans-serif;letter-spacing:.24em;color:#f5d68b}.event-photo strong{font-size:clamp(34px,3vw,50px);font-weight:500}
 .gallery-section{background:#f3f0e6}.gallery-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}.gallery-heading>p{max-width:390px;font:15px/1.6 Arial,sans-serif;color:#526057}.gallery-viewer{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:12px;height:clamp(330px,32vw,440px)}.gallery-feature{margin:0;position:relative;overflow:hidden;background:#d9d9ca;min-width:0}.gallery-feature img{width:100%;height:100%;object-fit:cover}.gallery-feature figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 20px 18px;color:#fff;background:linear-gradient(transparent,#0c1e17d9);font:700 18px Arial,sans-serif}.gallery-thumbs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:8px;min-height:0}.gallery-thumb{position:relative;overflow:hidden;min-width:0;min-height:0;padding:0;border:3px solid transparent;background:#d9d9ca;cursor:pointer;text-align:left}.gallery-thumb[aria-pressed="true"]{border-color:var(--gold)}.gallery-thumb:focus-visible{outline:3px solid #1a3829;outline-offset:2px}.gallery-thumb img{width:100%;height:100%;object-fit:cover}.gallery-thumb span{position:absolute;left:0;right:0;bottom:0;padding:20px 9px 7px;background:linear-gradient(transparent,#0c1e17d9);color:#fff;font:700 12px Arial,sans-serif}
@@ -35,4 +35,32 @@
 .event-photo.is-surprising>.event-photo-kicker,.event-photo.is-surprising>strong,.events-truck.is-surprising>figcaption{opacity:0}
 @media(prefers-reduced-motion:reduce){.gallery-secret,.truck-secret{transition:none}.truck-surprise.is-playing .truck-mini{animation:none;left:12px}.truck-surprise.is-playing .truck-message{animation:none;opacity:1}}
 @media(max-width:760px){.gallery-tap{position:absolute;z-index:3;top:0;bottom:0;display:flex;align-items:center;width:50%;padding:0 10px;border:0;background:transparent;color:#fff;touch-action:manipulation}.gallery-tap-prev{left:0;justify-content:flex-start}.gallery-tap-next{right:0;justify-content:flex-end}.gallery-tap span{display:grid;place-items:center;width:34px;height:42px;border-radius:22px;background:#10291dcc;box-shadow:0 1px 7px #0006;font:35px/1 Arial,sans-serif}.gallery-tap:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}}
+
+/* Beliebig viele Galeriebilder bleiben in einer kompakten Auswahl erreichbar. */
+@media(min-width:761px){.gallery-thumbs{height:100%;overflow-y:auto;grid-auto-rows:calc((100% - 16px)/3);align-content:start;scrollbar-gutter:stable}}
+.menu-category li{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.menu-category li span:first-child{min-width:0}
+.menu-price{flex:none;font-weight:700;white-space:nowrap;color:var(--forest)}
+.special-event[hidden],.special-event [hidden]{display:none!important}
+.special-event{background:#f1ebd9;border-top:1px solid #d6cda9;border-bottom:1px solid #d6cda9;display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.78fr);gap:clamp(28px,5vw,80px);align-items:center}
+.special-event-copy{max-width:700px}.special-event .eyebrow{color:#8a6330}.special-event h2{max-width:680px}.special-event-date{margin:22px 0 12px;color:#76501f;font:700 17px/1.5 Arial,sans-serif}.special-event-copy>p:not(.eyebrow):not(.special-event-date){font:17px/1.65 Arial,sans-serif;color:#435348}.special-event img{width:100%;max-height:390px;aspect-ratio:4/3;object-fit:cover;border-radius:4px}.special-event:not(:has(img:not([hidden]))){grid-template-columns:1fr}
+@media(max-width:760px){.special-event{display:block}.special-event img{margin-top:28px;max-height:300px}.menu-category li{font-size:15px}}
+
+/* Foodtruck-Seite: kompakte Desktop-Bildgruppe, Text sofort am Seitenanfang. */
+@media(min-width:761px){
+  .events-layout{min-height:0;align-items:start;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2vw,36px)}
+  .events-images{height:clamp(520px,66vh,760px);min-height:0;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:12px}
+  .events-truck{grid-row:1/3;grid-column:1}
+  .events-table-visual{grid-row:1;grid-column:2}
+  .events-dish{grid-row:2;grid-column:2}
+  .events-panel{justify-content:flex-start;padding:clamp(32px,3.2vw,60px)}
+  .events-panel h1{font-size:clamp(52px,4.3vw,82px)}
+  .events-panel .divider{margin:28px 0}
+}
+@media(min-width:761px) and (max-width:1499px){
+  .events-images{height:clamp(490px,62vh,640px);grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1.8fr) minmax(0,1fr)}
+  .events-truck{grid-row:1;grid-column:1/3}
+  .events-table-visual{grid-row:2;grid-column:1}
+  .events-dish{grid-row:2;grid-column:2}
+}
 
