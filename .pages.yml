@@ -40,6 +40,11 @@ content:
           - { name: image, label: Foto, type: image, required: true }
           - { name: alt, label: Bildbeschreibung, type: string, required: true }
       - { name: gallery_intro, label: Einleitung Galerie, type: text }
+      - { name: about_eyebrow, label: Über uns - kleine Überschrift, type: string }
+      - { name: about_title, label: Über uns - Überschrift, type: text, required: true }
+      - { name: about_text, label: Über uns - Text, type: text, required: true }
+      - { name: about_image, label: Über uns - Foto (optional), type: image }
+      - { name: about_image_alt, label: Über uns - Bildbeschreibung (falls Foto gewählt), type: string }
       - name: gallery
         label: Galeriebilder
         type: object
@@ -126,3 +131,15 @@ content:
       - { name: reservation_label, label: Text auf dem Reservierungsknopf (optional), type: string }
       - { name: link_label, label: Link-Text (optional), type: string }
       - { name: link_url, label: Link-Ziel (optional), type: string }
+
+  - name: daily
+    label: Tagesempfehlung
+    type: file
+    path: content/daily.json
+    format: json
+    fields:
+      - { name: enabled, label: Tagesempfehlung auf der Startseite anzeigen, type: boolean }
+      - { name: title, label: Name der Speise, type: string, required: true }
+      - { name: image, label: Foto der Speise, type: image, required: true }
+      - { name: image_alt, label: Bildbeschreibung, type: string, required: true }
+      - { name: text, label: Text unter dem Foto, type: text }
