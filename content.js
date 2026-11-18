@@ -171,6 +171,14 @@ function applySpecial(content) {
     write('[data-special-title]', content.title);
     write('[data-special-date]', content.date);
     write('[data-special-description]', content.description);
+    const posterMode = content.poster_mode === true;
+    const poster = section.querySelector('[data-special-poster]');
+    if (poster) poster.hidden = !posterMode;
+    write('[data-special-poster-title]', content.poster_title || content.title);
+    write('[data-special-poster-subtitle]', content.poster_subtitle);
+    write('[data-special-poster-date]', content.date);
+    write('[data-special-poster-details]', content.poster_details || content.description);
+    write('[data-special-poster-footer]', content.poster_footer);
     const reserve = section.querySelector('[data-special-reserve]');
     if (reserve) {
       reserve.hidden = content.reservation_enabled !== true;
@@ -181,12 +189,21 @@ function applySpecial(content) {
     const reservationNotice = section.querySelector('[data-special-reservation-notice]');
     if (reservationNotice) reservationNotice.hidden = content.reservation_enabled !== true;
     const image = section.querySelector('[data-special-image]');
+    const posterImage = section.querySelector('[data-special-poster-image]');
     const imagePath = mediaUrl(content.image);
+    section.classList.toggle('special-event--landscape', posterMode);
+    if (posterImage) {
+      posterImage.hidden = !posterMode || !imagePath;
+      if (posterMode && imagePath) posterImage.src = imagePath;
+    }
     if (image) {
-      image.hidden = !imagePath;
-      if (imagePath) {
+      image.hidden = posterMode || !imagePath;
+      if (!posterMode && imagePath) {
+        const updateLayout = () => section.classList.toggle('special-event--landscape', image.naturalWidth > image.naturalHeight * 1.2);
+        image.addEventListener('load', updateLayout, { once: true });
         image.src = imagePath;
         image.alt = content.image_alt || '';
+        if (image.complete) updateLayout();
       }
     }
     const link = section.querySelector('[data-special-link]');
