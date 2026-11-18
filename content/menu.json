@@ -1,15 +1,113 @@
 {
   "intro": "Von Pierogi bis Burger – unsere Auswahl im Überblick.",
-  "image": "assets/pierogi_teller.webp",
+  "image": "/assets/pierogi_teller.webp",
   "image_alt": "Pierogi auf einem Teller",
   "note": "Die aktuelle Auswahl, Verfügbarkeit und Preise erfahren Sie direkt im Restaurant oder über den Bestelllink.",
   "categories": [
-    {"eyebrow": "ZUM START", "title": "Vorspeisen", "items": [{"name": "Arancini-Crevetten", "price": ""}, {"name": "Pierogi Variation", "price": ""}], "note": ""},
-    {"eyebrow": "UNSER SCHWERPUNKT", "title": "Pierogi", "items": [{"name": "Twarog & Kartoffelstock", "price": ""}, {"name": "Suurchabis & gegrillte Waldpilze", "price": ""}, {"name": "Rindshackfüllung", "price": ""}, {"name": "Trüffel & Waldpilze", "price": ""}, {"name": "St. Galler Kälbli Pierogi", "price": ""}], "note": ""},
-    {"eyebrow": "HERZHAFT", "title": "Burger & Hauptspeisen", "items": [{"name": "EdenSmash", "price": ""}, {"name": "EdenCowboy", "price": ""}, {"name": "EdenRanger", "price": ""}, {"name": "EdenBrombeerBacon", "price": ""}, {"name": "Chabiswickel & Kohlroulade", "price": ""}], "note": "Burger werden mit EdenFries angeboten."},
-    {"eyebrow": "DAZU", "title": "Sides & Extras", "items": [{"name": "EdenFries", "price": ""}, {"name": "EdenFries X-Tra", "price": ""}, {"name": "EdenJalapeños", "price": ""}, {"name": "Pierogi-Toppings & Saucen", "price": ""}], "note": ""},
-    {"eyebrow": "ZUM ABSCHLUSS", "title": "Desserts", "items": [{"name": "Selbstgebackener Blaubeer-Briochemuffin", "price": ""}, {"name": "Schoki-Chäsli", "price": ""}, {"name": "Weitere Desserts nach aktueller Karte", "price": ""}], "note": ""},
-    {"eyebrow": "IM GLAS", "title": "Getränke", "items": [{"name": "Haus-Eistee von Dii's Tee: Classic Passion, Hibiskus Münze, Rooibos Ingwer und Alpenchrüter", "price": ""}, {"name": "Kalte Getränke, Kaffee & Tee", "price": ""}, {"name": "Bier, offene Weine und Spritz & Apéro", "price": ""}], "note": ""}
+    {
+      "eyebrow": "ZUM START",
+      "title": "Vorspeisen",
+      "items": [
+        {
+          "name": "Arancini-Crevetten",
+          "price": "CHF 14.50"
+        },
+        {
+          "name": "Pierogi Variation"
+        }
+      ]
+    },
+    {
+      "eyebrow": "UNSER SCHWERPUNKT",
+      "title": "Pierogi",
+      "items": [
+        {
+          "name": "Twarog & Kartoffelstock"
+        },
+        {
+          "name": "Suurchabis & gegrillte Waldpilze"
+        },
+        {
+          "name": "Rindshackfüllung"
+        },
+        {
+          "name": "Trüffel & Waldpilze"
+        },
+        {
+          "name": "St. Galler Kälbli Pierogi"
+        }
+      ]
+    },
+    {
+      "eyebrow": "HERZHAFT",
+      "title": "Burger & Hauptspeisen",
+      "items": [
+        {
+          "name": "EdenSmash"
+        },
+        {
+          "name": "EdenCowboy"
+        },
+        {
+          "name": "EdenRanger"
+        },
+        {
+          "name": "EdenBrombeerBacon"
+        },
+        {
+          "name": "Chabiswickel & Kohlroulade"
+        }
+      ],
+      "note": "Burger werden mit EdenFries angeboten."
+    },
+    {
+      "eyebrow": "DAZU",
+      "title": "Sides & Extras",
+      "items": [
+        {
+          "name": "EdenFries"
+        },
+        {
+          "name": "EdenFries X-Tra"
+        },
+        {
+          "name": "EdenJalapeños"
+        },
+        {
+          "name": "Pierogi-Toppings & Saucen"
+        }
+      ]
+    },
+    {
+      "eyebrow": "ZUM ABSCHLUSS",
+      "title": "Desserts",
+      "items": [
+        {
+          "name": "Selbstgebackener Blaubeer-Briochemuffin"
+        },
+        {
+          "name": "Schoki-Chäsli"
+        },
+        {
+          "name": "Weitere Desserts nach aktueller Karte"
+        }
+      ]
+    },
+    {
+      "eyebrow": "IM GLAS",
+      "title": "Getränke",
+      "items": [
+        {
+          "name": "Haus-Eistee von Dii's Tee: Classic Passion, Hibiskus Münze, Rooibos Ingwer und Alpenchrüter"
+        },
+        {
+          "name": "Kalte Getränke, Kaffee & Tee"
+        },
+        {
+          "name": "Bier, offene Weine und Spritz & Apéro"
+        }
+      ]
+    }
   ],
   "closing": "Aktuelle Auswahl und Preise erfahren Sie direkt im Restaurant. Für Lieferung und Take-away führt der Link zur Plattform."
 }
