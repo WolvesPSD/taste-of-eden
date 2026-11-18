@@ -171,6 +171,15 @@ function applySpecial(content) {
     write('[data-special-title]', content.title);
     write('[data-special-date]', content.date);
     write('[data-special-description]', content.description);
+    const reserve = section.querySelector('[data-special-reserve]');
+    if (reserve) {
+      reserve.hidden = content.reservation_enabled !== true;
+      reserve.textContent = typeof content.reservation_label === 'string' && content.reservation_label.trim()
+        ? content.reservation_label.trim()
+        : 'Reservierung anfragen';
+    }
+    const reservationNotice = section.querySelector('[data-special-reservation-notice]');
+    if (reservationNotice) reservationNotice.hidden = content.reservation_enabled !== true;
     const image = section.querySelector('[data-special-image]');
     const imagePath = mediaUrl(content.image);
     if (image) {
