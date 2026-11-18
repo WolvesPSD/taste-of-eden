@@ -74,6 +74,19 @@ function applyHome(content) {
   }
 
   setText('.gallery-heading > p', content.gallery_intro);
+  setText('#ueber-uns .eyebrow', content.about_eyebrow);
+  setText('#ueber-uns h2', content.about_title);
+  setText('#ueber-uns > p', content.about_text);
+  const aboutFigure = document.querySelector('#ueber-uns .about-image');
+  const aboutImagePath = mediaUrl(content.about_image);
+  if (aboutFigure) {
+    aboutFigure.hidden = !aboutImagePath;
+    if (aboutImagePath) {
+      const image = aboutFigure.querySelector('img');
+      image.src = aboutImagePath;
+      image.alt = typeof content.about_image_alt === 'string' ? content.about_image_alt : '';
+    }
+  }
   if (Array.isArray(content.gallery) && content.gallery.length) {
     const thumbs = document.querySelector('.gallery-thumbs');
     const validImages = content.gallery.filter(item => mediaUrl(item.image));
@@ -226,6 +239,23 @@ function applySpecial(content) {
   });
 }
 
+function applyDaily(content) {
+  const section = document.querySelector('[data-daily]');
+  if (!section) return;
+  const imagePath = mediaUrl(content.image);
+  const title = typeof content.title === 'string' ? content.title.trim() : '';
+  const active = content.enabled === true && imagePath && title;
+  section.hidden = !active;
+  if (!active) return;
+  const image = section.querySelector('[data-daily-image]');
+  image.src = imagePath;
+  image.alt = typeof content.image_alt === 'string' ? content.image_alt : '';
+  section.querySelector('[data-daily-title]').textContent = title;
+  const description = section.querySelector('[data-daily-text]');
+  description.textContent = typeof content.text === 'string' ? content.text : '';
+  description.hidden = !description.textContent.trim();
+}
+
 async function loadContent(name, apply) {
   try {
     const response = await fetch(`content/${name}.json`, { cache: 'no-cache' });
@@ -241,6 +271,7 @@ if (page === 'home') {
   loadContent('home', applyHome);
   loadContent('events', applyEvents);
   loadContent('special', applySpecial);
+  loadContent('daily', applyDaily);
 } else if (page === 'menu') {
   loadContent('menu', applyMenu);
 } else if (page === 'events') {
