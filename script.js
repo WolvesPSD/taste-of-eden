@@ -47,7 +47,18 @@ function showGallery(index) {
   galleryImage.alt = button.dataset.galleryAlt;
   galleryCaption.textContent = button.dataset.galleryCaption;
   galleryThumbs.forEach(thumb => thumb.setAttribute('aria-pressed', String(thumb === button)));
-  button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  const strip = button.parentElement;
+  if (strip) {
+    const bounds = strip.getBoundingClientRect();
+    const imageBounds = button.getBoundingClientRect();
+    const left = imageBounds.left < bounds.left
+      ? imageBounds.left - bounds.left
+      : imageBounds.right > bounds.right ? imageBounds.right - bounds.right : 0;
+    const top = imageBounds.top < bounds.top
+      ? imageBounds.top - bounds.top
+      : imageBounds.bottom > bounds.bottom ? imageBounds.bottom - bounds.bottom : 0;
+    if (left || top) strip.scrollBy({ left, top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }
 }
 document.querySelector('.gallery-thumbs')?.addEventListener('click', event => {
   const button = event.target.closest('.gallery-thumb');
@@ -151,4 +162,3 @@ inquiryForm?.addEventListener('submit', event => {
 });
 if (location.hash === '#foodtruck-anfrage') openInquiry('Foodtruck');
 if (location.hash === '#catering-anfrage') openInquiry('Catering');
-
