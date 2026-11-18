@@ -50,7 +50,7 @@ function applyHome(content) {
     const grid = document.querySelector('.dish-grid');
     if (grid) {
       grid.replaceChildren();
-      content.highlights.forEach((item, index) => {
+      content.highlights.forEach(item => {
         const url = mediaUrl(item.image);
         if (!url) return;
         const card = document.createElement('article');
@@ -60,13 +60,11 @@ function applyHome(content) {
         image.alt = item.alt || '';
         image.loading = 'lazy';
         const copy = document.createElement('div');
-        const number = document.createElement('span');
-        number.textContent = String(index + 1).padStart(2, '0');
         const title = document.createElement('h3');
         title.textContent = item.title || '';
         const description = document.createElement('p');
         description.textContent = item.description || '';
-        copy.append(number, title, description);
+        copy.append(title, description);
         card.append(image, copy);
         grid.append(card);
       });
