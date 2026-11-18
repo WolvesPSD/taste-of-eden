@@ -24,9 +24,17 @@ Unter **Startseite und Galerie → Titelbilder** kann der Inhaber jede Bildkombi
 
 Im Bereich **Foodtruck und Events** lassen sich Einleitung, Haupttext, Kurztext auf der Startseite und die drei Fotos ändern.
 
+## Über uns
+
+Unter **Startseite und Galerie** lassen sich die kleine Überschrift, die grosse Überschrift und der Text von **Über uns** bearbeiten. Ein Foto kann zusätzlich hochgeladen oder ausgewählt werden; ohne Foto bleibt die bisherige Darstellung erhalten. Für ein verwendetes Foto eine Bildbeschreibung eintragen. Die grosse Überschrift darf einen Zeilenumbruch enthalten.
+
 ## Besonderer Event-Hinweis
 
-Unter **Besonderer Event-Hinweis** zuerst Titel, Datum und Beschreibung eintragen. Für einen gestalteten Flyer **Bearbeitbaren Flyer aus Textfeldern anzeigen** einschalten, einen Hintergrund **ohne Schrift** hochladen und grossen Titel, Untertitel, Zusatzzeile und Kontaktzeile eintragen. Datum und Uhrzeit kommen aus dem normalen Datumsfeld. Diese Texte bleiben einzeln am Handy bearbeitbar. Alternativ kann bei ausgeschaltetem Flyer-Schalter ein fertiges Bild angezeigt werden; dessen eingebrannte Schrift lässt sich im CMS nicht einzeln ändern. **Reservierung für diesen Event anbieten** schaltet den Knopf «Platz anfragen» ein oder aus. Er öffnet einen E-Mail-Entwurf; eine Anfrage gilt erst nach Bestätigung des Restaurants. Erst nach Kontrolle aller Angaben **Hinweis auf der Website anzeigen** einschalten. Der Event erscheint dann auf der Startseite und auf der Foodtruck-Seite an erster Stelle. Zum Ausblenden den Schalter ausschalten; die Einträge bleiben erhalten. Ohne Titel bleibt der Bereich auch bei eingeschaltetem Schalter verborgen.
+Unter **Besonderer Event-Hinweis** zuerst Titel, Datum und Beschreibung eintragen. Für einen gestalteten Flyer **Bearbeitbaren Flyer aus Textfeldern anzeigen** einschalten, einen Hintergrund **ohne Schrift** hochladen und grossen Titel, Untertitel, Zusatzzeile und Kontaktzeile eintragen. Datum und Uhrzeit kommen aus dem normalen Datumsfeld. Diese Texte bleiben einzeln am Handy bearbeitbar. Alternativ kann bei ausgeschaltetem Flyer-Schalter ein fertiges Bild angezeigt werden; dessen eingebrannte Schrift lässt sich im CMS nicht einzeln ändern. **Reservierung für diesen Event anbieten** schaltet den Knopf «Platz anfragen» ein oder aus. Er öffnet einen E-Mail-Entwurf; eine Anfrage gilt erst nach Bestätigung des Restaurants. Erst nach Kontrolle aller Angaben **Hinweis auf der Website anzeigen** einschalten. Der Event erscheint auf der Startseite direkt unter dem grossen Startbild und auf der Foodtruck-Seite im oberen Bereich. Zum Ausblenden den Schalter ausschalten; die Einträge bleiben erhalten. Ohne Titel bleibt der Bereich auch bei eingeschaltetem Schalter verborgen.
+
+## Tagesempfehlung
+
+Unter **Tagesempfehlung** kann der Inhaber ein Speisenfoto vom Handy hochladen oder ein vorhandenes Bild auswählen, den Namen der Speise und einen Text **unter dem Foto** eintragen. Eine Bildbeschreibung gehört ebenfalls dazu. Mit **Tagesempfehlung auf der Startseite anzeigen** wird der Bereich ein- oder ausgeschaltet. Er erscheint nur auf der Startseite, direkt unter dem besonderen Event; falls kein Event aktiv ist, direkt unter dem grossen Startbild. Zum Ausblenden den Schalter ausschalten und **Save** drücken; Bild und Text bleiben für später erhalten. Ein aktiver Schalter allein zeigt den Bereich nur mit Speisenname und gültigem Bild an.
 
 ## Veröffentlichung
 
