@@ -42,7 +42,6 @@ content:
       - { name: gallery_intro, label: Einleitung Galerie, type: text }
       - name: gallery
         label: Galeriebilder
-        description: Weitere Bilder hinzufügen, entfernen oder in die gewünschte Reihenfolge ziehen.
         type: object
         list:
           min: 1
@@ -120,3 +119,4 @@ content:
       - { name: image_alt, label: Bildbeschreibung (falls Foto gewählt), type: string }
       - { name: link_label, label: Link-Text (optional), type: string }
       - { name: link_url, label: Link-Ziel (optional), type: string }
+
