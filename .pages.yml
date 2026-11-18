@@ -119,4 +119,3 @@ content:
       - { name: image_alt, label: Bildbeschreibung (falls Foto gewählt), type: string }
       - { name: link_label, label: Link-Text (optional), type: string }
       - { name: link_url, label: Link-Ziel (optional), type: string }
-
